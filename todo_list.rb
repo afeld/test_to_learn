@@ -1,19 +1,37 @@
+require 'yaml'
 require './todo'
 
 class TodoList
-  def initialize
-    # do stuff here
+  def initialize(filename)
+    @filename = filename
+    if File.exists?(filename)
+      serialized = File.read(filename)
+      @tasks = YAML.load(serialized)
+    else
+      @tasks = []
+    end
   end
 
   def add(title)
-    # do stuff here
+    task = Todo.new(title)
+    @tasks << task
+    task
   end
 
   def complete(index)
-    # do stuff here
+    @tasks.delete_at(index)
   end
 
   def to_s
-    # do stuff here
+    output = ''
+    @tasks.each_with_index do |task, i|
+      output << "#{i}: #{task.title}\n"
+    end
+    output
+  end
+
+  def save
+    serialized = YAML.dump(@tasks)
+    File.open(@filename, 'w') {|f| f.write(serialized) }
   end
 end
