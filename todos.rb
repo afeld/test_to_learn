@@ -33,21 +33,21 @@ class TodoList
   def add(title)
     task = Todo.new(title)
     @tasks << task
+    task
   end
 
   def complete(index)
     task = @tasks[index]
     task.complete
-  end
-
-  def completed
-    @tasks.select{ |task| !task.completed? }
+    task
   end
 
   def to_s
     output = ''
-    self.completed.each_with_index do |task, i|
-      output << "#{i}: #{task.title}\n"
+    @tasks.each_with_index do |task, i|
+      unless task.completed?
+        output << "#{i}: #{task.title}\n"
+      end
     end
     output
   end
@@ -56,4 +56,24 @@ class TodoList
     serialized = YAML.dump(@tasks)
     File.open(@filename, 'w') {|f| f.write(serialized) }
   end
+end
+
+
+if __FILE__ == $0
+  list = TodoList.new('todos.yml')
+  case ARGV[0]
+  when 'add'
+    title = ARGV[1]
+    task = list.add(title)
+    puts "\"#{task.title}\" added!\n"
+  when 'complete'
+    index = ARGV[1].to_i
+    puts index
+    task = list.complete(index)
+    puts "\"#{task.title}\" complete!\n"
+  end
+
+  puts "Remaining:"
+  puts list.to_s
+  list.save
 end
