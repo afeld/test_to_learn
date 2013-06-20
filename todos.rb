@@ -47,20 +47,30 @@ end
 
 
 if __FILE__ == $0
+  puts "COMMANDS:\na: add\nc: complete\nq: quit\n"
   list = TodoList.new('todos.yml')
-  case ARGV[0]
-  when 'add'
-    title = ARGV[1]
-    task = list.add(title)
-    puts "\"#{task.title}\" added!\n"
-  when 'complete'
-    index = ARGV[1].to_i
-    puts index
-    task = list.complete(index)
-    puts "\"#{task.title}\" complete!\n"
+  while true
+    puts "\nTODOS:\n#{list}\n"
+
+    print "> "
+    input = gets.strip
+    case input
+    when 'a', 'add'
+      print "title > "
+      title = gets.strip
+      task = list.add(title)
+      puts "\"#{title}\" added!"
+    when 'c', 'complete'
+      print "index > "
+      index = gets.to_i
+      task = list.complete(index)
+      puts "\"#{task.title}\" complete!\n"
+    when 'q', 'quit'
+      break
+    else
+      puts "WARNING: unknown command"
+    end
   end
 
-  puts "Remaining:"
-  puts list.to_s
   list.save
 end
