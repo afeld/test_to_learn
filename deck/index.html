@@ -37,11 +37,34 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Reveal.js</h1>
-					<h3>HTML Presentations Made Easy</h3>
+					<h1>Test to Learn</h1>
+					<h3>Aidan Feldman</h3>
 					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
+						<small><a href="http://api.afeld.me">api.afeld.me</a> / <a href="http://twitter.com/aidanfeldman">@aidanfeldman</a></small>
 					</p>
+				</section>
+
+				<section data-background="http://3.bp.blogspot.com/_59TdlP1XdGk/TOR66Ta34TI/AAAAAAAAOVw/TLylr7tMGys/s1600/radioflyer.jpg">
+					<h2 style="padding: 0.4em; background-color:rgba(0,0,0,0.8)">testing limits</h2>
+				</section>
+
+				<section>
+					<h2>part of getting better...</h2>
+					<img class="fragment" width="500" height="333" src="http://blogs.citypages.com/gimmenoise/gallagher5000.jpg">
+					<p class="fragment">is overcoming the fear of breaking things</p>
+				</section>
+
+				<section>
+					<h2>mitigate risk</h2>
+				</section>
+
+				<section>
+					<h2>how?</h2>
+					<ul>
+						<li class="fragment">version control</li>
+						<li class="fragment">abstraction</li>
+						<li class="fragment">testing</li>
+					</ul>
 				</section>
 
 				<section>
@@ -360,8 +383,8 @@ function linkify( selector ) {
 				history: true,
 				center: true,
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+				theme: 'night', // available themes are in /css/theme
+				transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
 
 				// Optional libraries used to extend on reveal.js
 				dependencies: [
@@ -369,7 +392,7 @@ function linkify( selector ) {
 					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					// { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
 					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
 					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
 					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
