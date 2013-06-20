@@ -40,10 +40,14 @@ class TodoList
     task.complete
   end
 
+  def completed
+    @tasks.select{ |task| !task.completed? }
+  end
+
   def to_s
     output = ''
-    @tasks.each_with_index do |task, i|
-      output << "#{i+1}: #{task.title}\n"
+    self.completed.each_with_index do |task, i|
+      output << "#{i}: #{task.title}\n"
     end
     output
   end
