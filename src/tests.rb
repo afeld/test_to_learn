@@ -1,4 +1,4 @@
-require './todo_list'
+require_relative './todo_list'
 
 @filename = 'todos-test.yml'
 

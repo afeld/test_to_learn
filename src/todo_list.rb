@@ -1,5 +1,5 @@
 require 'yaml'
-require './todo'
+require_relative './todo'
 
 class TodoList
   def initialize(filename)

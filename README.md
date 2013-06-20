@@ -3,13 +3,13 @@
 To run app:
 
 ```bash
-ruby todos_cli.rb
+./bin/todos
 ```
 
 To run tests:
 
 ```bash
-ruby tests.rb
+ruby src/tests.rb
 ```
 
 ## Resources
