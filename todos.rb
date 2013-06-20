@@ -43,7 +43,7 @@ class TodoList
   def to_s
     output = ''
     @tasks.each_with_index do |task, i|
-      output << "#{i}: #{task.title}"
+      output << "#{i+1}: #{task.title}\n"
     end
     output
   end
@@ -53,12 +53,3 @@ class TodoList
     File.open(@filename, 'w') {|f| f.write(serialized) }
   end
 end
-
-
-
-list = TodoList.new('todos.yml')
-list.add("dry cleaning")
-list.save
-
-l2 = TodoList.new('todos.yml')
-puts l2.to_s == list.to_s

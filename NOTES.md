@@ -1,8 +1,15 @@
 * build up a test suite, and a testing library to go with it
 * command-line TODO app
-    * classes: List, Item
-    * add "started" status (trinary vs binary state)
+    * steps:
+        * start with bare-bones Todo class
+        * add persistence
+        * move list logic into class
+        * flat tests
+        * test blocks
+        * clean state between each test
+        * add "started" status (trinary vs binary state)
     * persisting
+        * start without setting filename
 
 * a big part of getting better at coding is overcoming the fear of breaking things
 * it's not that the risk diminshes (the projects get more complex and the problems are new)
@@ -34,6 +41,7 @@
         * interaction-y things are hard to test, so move as much out of there as you can
     * [more details](http://stackoverflow.com/questions/4904096/whats-the-difference-between-unit-functional-acceptance-and-integration-test)
 * testing forces you to write better code
+    * write things to be testable
     * look at it from the outside in
         * the UX perspective
     * encourages you to break it into smaller pieces
