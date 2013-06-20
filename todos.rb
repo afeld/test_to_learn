@@ -47,8 +47,11 @@ end
 
 
 if __FILE__ == $0
-  puts "COMMANDS:\na: add\nc: complete\nq: quit\n"
+  HELP_TEXT = "COMMANDS:\na: add\nc: complete\nh: help\nq: quit\n"
+
+  puts HELP_TEXT
   list = TodoList.new('todos.yml')
+
   while true
     puts "\nTODOS:\n#{list}\n"
 
@@ -56,19 +59,22 @@ if __FILE__ == $0
     input = gets.strip
     case input
     when 'a', 'add'
-      print "title > "
+      print "title? > "
       title = gets.strip
       task = list.add(title)
       puts "\"#{title}\" added!"
     when 'c', 'complete'
-      print "index > "
+      print "index? > "
       index = gets.to_i
       task = list.complete(index)
       puts "\"#{task.title}\" complete!\n"
+    when 'h', 'help'
+      puts HELP_TEXT
     when 'q', 'quit'
       break
     else
       puts "WARNING: unknown command"
+      puts HELP_TEXT
     end
   end
 
