@@ -12,7 +12,7 @@ To run tests:
 ruby src/tests.rb
 ```
 
-For the exercise, modify the files in the [`master` branch under `src/`](https://github.com/afeld/test_to_learn/tree/master/src).
+For the exercise, modify the files in the [`master` branch under `src/`](https://github.com/afeld/test_to_learn/tree/master/src).  You can also cheat and take a look at the [`complete` branch](https://github.com/afeld/test_to_learn/tree/complete/src).
 
 ## Resources
 
