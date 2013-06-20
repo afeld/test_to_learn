@@ -12,6 +12,8 @@ To run tests:
 ruby src/tests.rb
 ```
 
+For the exercise, modify the files in the [`master` branch under `src/`](https://github.com/afeld/test_to_learn/tree/master/src).
+
 ## Resources
 
 * [A Guide to Testing Rails Applications](http://guides.rubyonrails.org/testing.html)
