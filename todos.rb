@@ -3,19 +3,10 @@ require 'yaml'
 class Todo
   def initialize(title)
     @title = title
-    @completed = false
   end
 
   def title
     @title
-  end
-
-  def completed?
-    @completed
-  end
-
-  def complete
-    @completed = true
   end
 end
 
@@ -37,17 +28,13 @@ class TodoList
   end
 
   def complete(index)
-    task = @tasks[index]
-    task.complete
-    task
+    @tasks.delete_at(index)
   end
 
   def to_s
     output = ''
     @tasks.each_with_index do |task, i|
-      unless task.completed?
-        output << "#{i}: #{task.title}\n"
-      end
+      output << "#{i}: #{task.title}\n"
     end
     output
   end
