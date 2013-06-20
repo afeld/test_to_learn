@@ -1,9 +1,11 @@
-require './todo_list'
+#!/usr/bin/env ruby
+
+require_relative '../src/todo_list'
 
 HELP_TEXT = "COMMANDS:\na: add\nc: complete\nh: help\nq: quit\n"
 
 puts HELP_TEXT
-list = TodoList.new('todos.yml')
+list = TodoList.new
 
 while true
   puts "\nTODOS:\n#{list}\n"
