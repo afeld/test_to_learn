@@ -2,6 +2,7 @@
 * command-line TODO app
     * classes: List, Item
     * add "started" status (trinary vs binary state)
+    * persisting
 
 * a big part of getting better at coding is overcoming the fear of breaking things
 * it's not that the risk diminshes (the projects get more complex and the problems are new)

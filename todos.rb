@@ -1,3 +1,5 @@
+require 'yaml'
+
 class Todo
   def initialize(title)
     @title = title
@@ -18,8 +20,14 @@ class Todo
 end
 
 class TodoList
-  def initialize
-    @tasks = []
+  def initialize(filename)
+    @filename = filename
+    if File.exists?(filename)
+      serialized = File.read(filename)
+      @tasks = YAML.load(serialized)
+    else
+      @tasks = []
+    end
   end
 
   def add(title)
@@ -33,14 +41,24 @@ class TodoList
   end
 
   def to_s
+    output = ''
     @tasks.each_with_index do |task, i|
-      puts "#{i}: #{task.title}"
+      output << "#{i}: #{task.title}"
     end
+    output
+  end
+
+  def save
+    serialized = YAML.dump(@tasks)
+    File.open(@filename, 'w') {|f| f.write(serialized) }
   end
 end
 
 
 
-list = TodoList.new
+list = TodoList.new('todos.yml')
 list.add("dry cleaning")
-list.to_s
+list.save
+
+l2 = TodoList.new('todos.yml')
+puts l2.to_s == list.to_s
