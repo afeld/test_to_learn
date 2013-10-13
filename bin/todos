@@ -8,7 +8,7 @@ puts HELP_TEXT
 list = TodoList.new
 
 while true
-  puts "\nTODOS:\n#{list}\n"
+  puts "\nTODOS:\n#{list.to_s}\n"
 
   print "> "
   input = gets.strip
