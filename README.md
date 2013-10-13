@@ -17,9 +17,12 @@ For the exercise, modify the files in the [`master` branch under `src/`](https:/
 ## Resources
 
 * [A Guide to Testing Rails Applications](http://guides.rubyonrails.org/testing.html)
-* [RSpec Relish documentation](https://www.relishapp.com/rspec)
-* [The RSpec Book](http://pragprog.com/book/achbd/the-rspec-book)
 * [Better Specs](http://betterspecs.org/)
+* [Rails Testing](https://www.codeschool.com/paths/ruby#rails-testing) courses on Code School
+* [RSpec Relish documentation](https://www.relishapp.com/rspec)
+* [Ruby for Newbies: Testing with Rspec](http://net.tutsplus.com/tutorials/ruby/ruby-for-newbies-testing-with-rspec/)
+* [Ruby Programming/Unit testing](http://en.wikibooks.org/wiki/Ruby_Programming/Unit_testing)
+* [The RSpec Book](http://pragprog.com/book/achbd/the-rspec-book)
 
 -----------------
 
