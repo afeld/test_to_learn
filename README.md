@@ -12,14 +12,17 @@ To run tests:
 ruby src/tests.rb
 ```
 
-For the exercise, modify the files in the [`master` branch under `src/`](https://github.com/afeld/test_to_learn/tree/master/src).  You can also cheat and take a look at the [`complete` branch](https://github.com/afeld/test_to_learn/tree/complete/src).
+For the exercise, modify the files in the [`gh-pages` branch under `src/`](https://github.com/afeld/test_to_learn/tree/gh-pages/src).  You can also cheat and take a look at the [`complete` branch](https://github.com/afeld/test_to_learn/tree/complete/src).
 
 ## Resources
 
 * [A Guide to Testing Rails Applications](http://guides.rubyonrails.org/testing.html)
-* [RSpec Relish documentation](https://www.relishapp.com/rspec)
-* [The RSpec Book](http://pragprog.com/book/achbd/the-rspec-book)
 * [Better Specs](http://betterspecs.org/)
+* [Rails Testing](https://www.codeschool.com/paths/ruby#rails-testing) courses on Code School
+* [RSpec Relish documentation](https://www.relishapp.com/rspec)
+* [Ruby for Newbies: Testing with Rspec](http://net.tutsplus.com/tutorials/ruby/ruby-for-newbies-testing-with-rspec/)
+* [Ruby Programming/Unit testing](http://en.wikibooks.org/wiki/Ruby_Programming/Unit_testing)
+* [The RSpec Book](http://pragprog.com/book/achbd/the-rspec-book)
 
 -----------------
 
